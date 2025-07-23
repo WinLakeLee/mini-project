@@ -1,0 +1,13 @@
+const {createProxyMiddleWare} = require('http-proxy-middleware');
+
+module.exports = function(app) {
+  app.use(
+    createProxyMiddleWare('/githubusercontent', {
+      target: 'https://raw.githubusercontent.com/',
+      pathRewrite: {
+        '^/githubusercontent': ''
+      },
+      changeOrigin: true
+    })
+  )
+}
