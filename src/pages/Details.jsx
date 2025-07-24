@@ -5,20 +5,29 @@ import "./Details.css"
 const Details = ({ fish }) => {
 
   const idx = useParams();
-  
+
   console.log(idx)
   console.log(fish);
   return (
     <div className="Details">
-      <Carousel onMouseOver={() => { }}>
-        <Carousel.Item>
-          <img className="Carousel" src={`https://raw.githubusercontent.com/WinLakeLee/data-bank/main/img/${fish[idx.id].species}.jpg`} alt="" />
-        </Carousel.Item>
-      </Carousel>
+      <div className="Container">
+        <Carousel className="Details" onMouseOver={() => { }}>
+          <Carousel.Item>
+            <img className="Carousel" src={`https://raw.githubusercontent.com/WinLakeLee/data-bank/main/img/${fish[idx.id].species}.jpg`} alt="" />
+          </Carousel.Item>
+        </Carousel>
+        <div className="Content">
+          <div className="desc">
+            <article>
+              대충아무거나씀
+            </article>
+          </div>
+        </div>
+      </div>
       <div className="rightBar">
         <div className="names">
           <ul>
-            <li></li>
+            <li>{fish[idx.id].name}</li>
             <li></li>
             <li></li>
           </ul>
@@ -37,13 +46,9 @@ const Details = ({ fish }) => {
             <li></li>
           </ul>
         </div>
-        <div className="content">
-          <div className="desc">
-            <article>
-            </article>
-          </div>
-        </div>
       </div>
+      <footer>
+      </footer>
     </div>
   )
 

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Carousels = ({ fish }) => {
 
   const navigate = useNavigate();
+  
   return (
 
     <>

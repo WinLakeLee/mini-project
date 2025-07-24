@@ -1,9 +1,9 @@
 import { Col, Row } from "react-bootstrap";
-import Card from "./Card"
+import Cards from "../components/Card";
 
 const DocsMain = ({fish}) => {
 
-  console.log("docsmain"+fish);
+  console.log("docsMain"+fish);
 
   return (
 
@@ -15,7 +15,7 @@ const DocsMain = ({fish}) => {
           console.log(data);
           return (
             <Col key={idx}>
-              <Card data={data} />
+              <Cards data={data} />
             </Col>
           )
         })

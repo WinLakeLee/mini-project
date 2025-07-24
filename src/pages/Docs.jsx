@@ -1,7 +1,5 @@
 import { Outlet, useParams } from "react-router-dom";
 import DocsMain from "./DocsMain";
-import { useEffect } from "react";
-
 const Docs = ({ fish }) => {
   
   const param = useParams();

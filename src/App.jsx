@@ -8,6 +8,7 @@ import Docs from './pages/Docs';
 import Register from './pages/Register'
 import Sign from './pages/Sign'
 import Details from './pages/Details';
+import { Spinner } from 'react-bootstrap';
 
 function App() {
   const [fish, setFish] = useState([]);
@@ -28,7 +29,7 @@ function App() {
     <>
       <div className='container'>
         <Header />
-        <Suspense fallback={<div>로딩중</div>}>
+        <Suspense fallback={<Spinner animation="border" variant="primary" />}>
           <Routes>
             <Route path='/' element={<MainPage fish={fish} />} />
             <Route path='/docs' element={<Docs fish={fish} />}>
