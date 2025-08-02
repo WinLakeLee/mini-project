@@ -33,7 +33,7 @@ function App() {
   }, [])
 
 useEffect(() => {
-  axios.get('/src/data/posts.json')
+  axios.get('../data/posts.json')
     .then(res => dispatch(addPost(res.data)))
     .catch(err => console.error(err));
 }, []);
