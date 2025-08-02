@@ -20,7 +20,6 @@ function App() {
 
   useEffect(() => {
     async function useFetch() {
-
       await axios.get('https://raw.githubusercontent.com/WinLakeLee/data-bank/main/fish.json')
         .then(res =>
           setFish(res.data)
@@ -31,12 +30,16 @@ function App() {
     }
     useFetch()
   }, [])
+  useEffect(() => {
+    async function useFetch() {
+      await axios.get('https://raw.githubusercontent.com/WinLakeLee/data-bank/main/posts.json')
+        .then(res => dispatch(addPost(res.data)))
+        .catch(err => console.error(err));
+    }
+    useFetch()
+  }, [])
 
-useEffect(() => {
-  axios.get('../data/posts.json')
-    .then(res => dispatch(addPost(res.data)))
-    .catch(err => console.error(err));
-}, []);
+
 
   return (
     <>
