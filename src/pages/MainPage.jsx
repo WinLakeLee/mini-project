@@ -7,7 +7,7 @@ const MainPage = ({ fish }) => {
   const [posts, setPosts] = useState([]);
 
 useEffect(() => {
-  axios.get('/data/posts.json')
+  axios.get('../data/posts.json')
     .then(res => setPosts(res.data))
     .catch(err => console.error(err));
 }, []);

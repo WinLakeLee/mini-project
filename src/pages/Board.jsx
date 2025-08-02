@@ -26,7 +26,7 @@ export default function Board() {
   const POSTS_PER_PAGE = 5;
 
   useEffect(() => {
-    axios.get("/src/data/posts.json").then((res) => {
+    axios.get("../data/posts.json").then((res) => {
       dispatch(addPost(res.data));
     });
   }, [dispatch]);
