@@ -1,0 +1,31 @@
+.Details {
+  display: flex;
+  margin: 0;
+  border: 1px solid #000;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Details .Container {
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+}
+.Details .Carousel {
+  width: 100%;
+  height: 100%;
+
+}
+.Details .Carousel img{
+}
+
+.Details .carousel.slide {
+}
+
+.Details .rightBar {
+  width: 50%;
+}
+
+.Details .Contents {
+  
+}
