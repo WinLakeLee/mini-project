@@ -26,7 +26,8 @@ export default function Board() {
   const POSTS_PER_PAGE = 5;
 
   useEffect(() => {
-    axios.get("../data/posts.json").then((res) => {
+    axios.get('https://raw.githubusercontent.com/WinLakeLee/data-bank/main/posts.json')
+    .then((res) => {
       dispatch(addPost(res.data));
     });
   }, [dispatch]);
